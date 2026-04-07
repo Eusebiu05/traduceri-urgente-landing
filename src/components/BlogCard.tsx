@@ -1,6 +1,15 @@
 import Link from "next/link";
 
-export const BlogCard = ({ title, excerpt, date, slug }) => {
+// 1. Definim "Contractul" (Interfața) pentru datele cardului
+interface BlogCardProps {
+  title: string;
+  excerpt: string;
+  date: string;
+  slug: string;
+}
+
+// 2. Aplicăm interfața pe argumentele componentei
+export const BlogCard = ({ title, excerpt, date, slug }: BlogCardProps) => {
   return (
     <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
       
@@ -19,7 +28,7 @@ export const BlogCard = ({ title, excerpt, date, slug }) => {
         {excerpt}
       </p>
       
-      {/* Butonul de citire care te duce pe ruta dinamică */}
+      {/* Butonul de citire */}
       <Link 
         href={`/blog/${slug}`} 
         className="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition-colors"
