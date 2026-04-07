@@ -39,3 +39,4 @@ export const BlogCard = ({ title, excerpt, date, slug }: BlogCardProps) => {
     </div>
   );
 };
+export default BlogCard;
