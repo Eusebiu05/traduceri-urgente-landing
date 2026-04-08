@@ -7,6 +7,7 @@ export const CompanyInfo = {
   email: "contact@traduceriurgente.com",
   whatsapp: "40720376824",
   googleReviewLink: "https://g.page/r/identificator-ul-tau/review",
+  phone: "+40765786180"
 };
 
 export const PricingData = {
