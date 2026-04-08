@@ -1,9 +1,9 @@
 // src/components/Hero.tsx
 import { PricingData, CompanyInfo } from "@/data/site-content";
 
-// Mesajul predefinit rămâne exact cum l-ai setat
+// Mesajul predefinit - actualizat să includă și factura
 const whatsappMessage = encodeURIComponent(
-  "Bună ziua. Doresc o ofertă pentru urmatoarele documente..."
+  "Bună ziua! Doresc o ofertă pentru traducerea unor acte auto (talon, contract, factură). Vă trimit imediat pozele."
 );
 
 export const Hero = () => (
@@ -16,50 +16,39 @@ export const Hero = () => (
     <div className="absolute inset-0 bg-slate-950/75 md:bg-slate-950/50 backdrop-blur-sm" />
 
     <div className="relative z-10 w-full max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
-      {/* BADGE - Aliniat la stânga pe mobil, centrat pe desktop */}
+      {/* BADGE */}
       <div className="mb-8 inline-flex items-center self-start md:self-center rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-sm font-semibold text-orange-400 backdrop-blur-md">
         Campanie Auto Standard • 35 Lei/Pag
       </div>
 
-      {/* TITLU PRINCIPAL - Aliniat la stânga pe mobil, centrat pe desktop */}
-      <h1 className="mb-12 text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight w-full text-left md:text-center">
+      {/* TITLU PRINCIPAL */}
+      <h1 className="mb-12 text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight w-full text-left md:text-center italic uppercase">
         Traduceri Acte Auto <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-500">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-500 not-italic">
           Gata în 1-2 ORE
         </span>
       </h1>
 
       {/* CARD PREMIUM */}
-      <div className="w-full rounded-3xl border border-white/10 bg-white/5 p-8 md:p-12 shadow-2xl backdrop-blur-md">
-        {/* Container flex pentru Listă și Preț - items-start pe mobil */}
+      <div className="w-full rounded-[2.5rem] border border-white/10 bg-white/5 p-8 md:p-12 shadow-2xl backdrop-blur-md">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10 mb-10 w-full">
           
-          {/* Partea stângă: Lista */}
+          {/* Partea stângă: Lista ACTUALIZATĂ */}
           <div className="w-full md:w-1/2 space-y-6 text-left">
             <ul className="space-y-5">
               {[
-                "Brief (Talon)",
+                "Talon / Certificat Înmatriculare",
                 "Contract Vânzare-Cumpărare",
+                "Factură Achiziție Auto",
                 "Permis de Conducere",
               ].map((item) => (
                 <li
                   key={item}
-                  className="flex items-center text-lg md:text-xl font-medium text-slate-100"
+                  className="flex items-center text-lg md:text-xl font-bold text-slate-100 italic uppercase"
                 >
-                  {/* Bifa simplă cu contur alb, ca în imagine */}
                   <div className="mr-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-white/80 text-white">
-                    <svg
-                      className="h-4 w-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={3}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={4}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   {item}
@@ -67,11 +56,9 @@ export const Hero = () => (
               ))}
             </ul>
             
-            {/* Etichetă rotunjită și luminoasă */}
             <div className="mt-6 inline-flex items-center rounded-full border border-blue-400/20 bg-blue-500/10 px-5 py-2.5 shadow-inner">
               <p className="text-xs md:text-sm font-bold text-blue-100 uppercase tracking-wider">
-                Traduceri din orice limbă{" "}
-                <span className="mx-2 text-blue-400/50">•</span> Autorizate de Ministerul Justiției
+                Traduceri Autorizate MJ <span className="mx-2 text-blue-400/50">•</span> Orice limbă
               </p>
             </div>
           </div>
@@ -82,24 +69,21 @@ export const Hero = () => (
               <span className="text-8xl md:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-b from-orange-400 to-red-500 tracking-tighter drop-shadow-sm">
                 {PricingData.autoStandard}
               </span>
-              <span className="text-2xl md:text-3xl font-bold text-slate-300">
-                LEI*
-              </span>
+              <span className="text-2xl md:text-3xl font-bold text-slate-300">LEI*</span>
             </div>
 
-            <p className="mt-4 text-lg md:text-xl font-bold text-white tracking-tight uppercase w-full text-left md:text-center">
+            <p className="mt-4 text-xl md:text-2xl font-black text-white tracking-tight uppercase italic w-full text-left md:text-center">
               Fără preț de urgență
             </p>
             <p className="text-sm md:text-base font-medium text-slate-400 w-full text-left md:text-center">
-              Fără costuri ascunse
+              Fără costuri ascunse 
             </p>
             
-            {/* Conditii - Corect integrat in containerul din dreapta */}
             <p className="mt-3 text-[11px] md:text-xs font-medium text-white/50 italic w-full text-left md:text-center leading-tight">
               *Ofertă valabilă pentru engleză și italiană.
             </p>
           </div>
-        </div> {/* <-- Aici se inchide corect containerul de flex */}
+        </div>
 
         {/* BUTON WHATSAPP */}
         <div className="border-t border-white/10 pt-8 mt-4 w-full flex flex-col items-center">
@@ -110,6 +94,7 @@ export const Hero = () => (
             rel="noopener noreferrer"
             className="group relative inline-flex h-16 w-full max-w-2xl items-center justify-start md:justify-center gap-3 rounded-2xl bg-[#25D366] px-8 text-xl font-bold text-white shadow-[0_8px_30px_rgb(37,211,102,0.25)] transition-all duration-300 hover:bg-[#20bd5a] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgb(37,211,102,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 uppercase tracking-wide"
           >
+            {/* SVG-ul de WhatsApp neschimbat */}
             <svg
               className="w-8 h-8 fill-current group-hover:scale-110 transition-transform duration-300"
               viewBox="0 0 24 24"
@@ -118,9 +103,13 @@ export const Hero = () => (
             </svg>
             Trimite Actele pe WhatsApp
           </a>
-          <p className="mt-4 text-sm font-medium text-slate-400 w-full text-left md:text-center">
+
+          {/* --- AICI ESTE MODIFICAREA --- */}
+          <p className="mt-4 text-sm font-bold text-white w-full text-left md:text-center uppercase tracking-widest leading-relaxed drop-shadow-sm">
             Fără formulare complicate. Răspundem și ne apucăm de treabă instant.
           </p>
+          {/* --- SFÂRȘIT MODIFICARE --- */}
+
         </div>
       </div>
     </div>

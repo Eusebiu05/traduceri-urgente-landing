@@ -7,7 +7,8 @@ export const CompanyInfo = {
   email: "contact@traduceriurgente.com",
   whatsapp: "40720376824",
   googleReviewLink: "https://g.page/r/identificator-ul-tau/review",
-  phone: "+40765786180"
+  phone: "+40765786180",
+  sediu: "Sat Valea Lupului,Comuna Valea Lupului,Strada PRIETENIEI,Nr.5A,camera 1,Judetul Iași"
 };
 
 export const PricingData = {

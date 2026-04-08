@@ -4,6 +4,8 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { CompanyInfo } from "@/data/site-content";
 import Link from "next/link";
+// Importăm fontul inițializat de server!
+import { greatVibes } from "@/lib/fonts"; 
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,36 +18,28 @@ export const Header = () => {
     }`;
   };
 
+  // AM ȘTERS INIȚIALIZAREA DE AICI (const greatVibes = Great_Vibes({...}))
+
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
       
-      {/* 1. BARA DE CONTACT (Zen-Style) */}
-      <div className="bg-slate-900 text-white py-2 px-6">
-        <div className="max-w-7xl mx-auto flex justify-center md:justify-end gap-6 text-[10px] md:text-xs font-bold uppercase tracking-widest">
-          <a href={`tel:${CompanyInfo.phone}`} className="flex items-center gap-1.5 hover:text-blue-400 transition-colors">
-            <span className="text-blue-500 font-black">TEL:</span> {CompanyInfo.phone}
-          </a>
-          <a href={`mailto:${CompanyInfo.email}`} className="hidden sm:flex items-center gap-1.5 hover:text-blue-400 transition-colors">
-            <span className="text-blue-500 font-black">EMAIL:</span> {CompanyInfo.email}
-          </a>
-        </div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-6">
-        {/* CONTAINER LOGO & NAV - flex-row și h-[70px] pe mobil pentru aliniere laterală */}
         <div className="flex flex-row justify-between items-center h-[70px] md:h-[90px]">
           
-          {/* LOGO - Acum la stânga pe mobil */}
-          <Link href="/" className="flex items-baseline gap-1.5 group">
-            <span className="font-extrabold text-xl md:text-3xl text-blue-700 italic tracking-tighter group-hover:text-blue-800 transition-colors uppercase whitespace-nowrap">
+          {/* LOGO */}
+          <Link 
+            href="/" 
+            className={`${greatVibes.className} flex flex-col items-start justify-center group select-none py-2`}
+          >
+            <span className="text-4xl md:text-5xl text-[#1e1b4b] group-hover:text-blue-800 transition-colors drop-shadow-sm leading-none pl-2 md:pl-4">
               Traduceri
             </span>
-            <span className="font-extrabold text-xl md:text-3xl text-slate-900 italic tracking-tighter uppercase whitespace-nowrap">
+            <span className="text-4xl md:text-5xl text-[#1e1b4b] group-hover:text-blue-800 transition-colors drop-shadow-sm leading-none -mt-4 md:-mt-6 ml-14 md:ml-20">
               Urgente
             </span>
           </Link>
 
-          {/* NAV — Desktop */}
+          {/* ... RESTUL CODULUI (Navigarea Desktop și Meniul Mobil rămân neschimbate) ... */}
           <nav className="hidden md:flex gap-8 items-center">
             <Link href="/" className={getLinkClass("/")}>Acasă</Link>
             <Link href="/blog" className={getLinkClass("/blog")}>Blog</Link>
@@ -59,8 +53,8 @@ export const Header = () => {
             </a>
           </nav>
 
-          {/* BUTON MENIU MOBIL - Mutat în DREAPTA lateral */}
           <div className="md:hidden flex items-center">
+             {/* Buton meniu */}
             <button 
               className="flex items-center justify-center bg-slate-50 hover:bg-slate-100 text-slate-900 h-10 w-10 rounded-xl border border-slate-200 transition-all active:scale-90"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -81,13 +75,11 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* MENIU DROPDOWN — Mobil */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-slate-100 shadow-2xl absolute w-full left-0 px-8 py-10 flex flex-col gap-5 animate-in fade-in slide-in-from-top-4 duration-300 z-[100]">
           <Link href="/" className="text-xl font-black text-slate-900 text-center py-3 border-b border-slate-50 tracking-tight" onClick={() => setIsMenuOpen(false)}>ACASĂ</Link>
           <Link href="/blog" className="text-xl font-black text-slate-900 text-center py-3 border-b border-slate-50 tracking-tight" onClick={() => setIsMenuOpen(false)}>BLOG</Link>
           <Link href="/about" className="text-xl font-black text-slate-900 text-center py-3 border-b border-slate-50 tracking-tight" onClick={() => setIsMenuOpen(false)}>DESPRE NOI</Link>
-          
           <a
             href={`https://wa.me/${CompanyInfo.whatsapp}`}
             className="bg-green-600 text-white px-4 py-5 rounded-2xl text-center font-black mt-6 shadow-xl flex justify-center items-center gap-3 uppercase tracking-wider transition-transform active:scale-95"
