@@ -12,6 +12,10 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Traduceri Urgente | Gata în 1-2 ore",
   description: "Traduceri autorizate pentru acte auto, contracte și documente.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
