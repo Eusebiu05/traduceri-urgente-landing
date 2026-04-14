@@ -11,7 +11,7 @@ export const Hero = () => (
     {/* FUNDAL ȘI OVERLAY */}
     <div
       className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+      style={{ backgroundImage: "url('/hero-bg.png')" }}
     />
     <div className="absolute inset-0 bg-slate-950/75 md:bg-slate-950/50 backdrop-blur-sm" />
 

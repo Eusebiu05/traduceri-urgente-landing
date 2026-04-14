@@ -60,7 +60,7 @@ export default function AboutPage() {
               <p>Nume: <span className="text-white font-bold">{CompanyInfo.name}</span></p>
               <p>CUI: <span className="text-white font-bold">{CompanyInfo.cui}</span></p>
               <p>Reg. Com: <span className="text-white font-bold">{CompanyInfo.j}</span></p>
-              <p>Admin: <span className="text-white font-bold">{CompanyInfo.admin}</span></p>
+              <p>Administrator: <span className="text-white font-bold">{CompanyInfo.admin}</span></p>
             </div>
           </div>
         </div>
