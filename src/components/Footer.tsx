@@ -1,4 +1,5 @@
 // src/components/Footer.tsx
+"use client";
 import { CompanyInfo } from "@/data/site-content";
 import Link from "next/link";
 
@@ -17,7 +18,8 @@ export const Footer = () => {
           {/* Un glow subtil albastru deschis în fundal pentru a păstra efectul premium */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-32 bg-blue-100 blur-[100px] rounded-full pointer-events-none"></div>
 
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 relative z-10">
+          {/* MODIFICARE AICI: 2 coloane și lățime max-w-5xl pentru simetrie */}
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 relative z-10">
             
             {/* COLOANA 1: Brand & Info */}
             <div className="space-y-6">
@@ -35,8 +37,8 @@ export const Footer = () => {
               </div>
             </div>
 
-            {/* COLOANA 2: Navigare */}
-            <div className="space-y-6">
+            {/* COLOANA 2: Navigare (Centrată pe jumătatea ei) */}
+            <div className="space-y-6 md:justify-self-center">
               <h4 className="text-slate-900 text-xs font-black uppercase tracking-[0.2em] border-l-2 border-blue-500 pl-3">
                 Navigare
               </h4>
@@ -44,7 +46,6 @@ export const Footer = () => {
                 <Link href="/" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Acasă</Link>
                 <Link href="/about" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Despre Noi</Link>
                 
-                {/* --- MODIFICARE AICI: href cu ?text=... --- */}
                 <a 
                   href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`} 
                   target="_blank"
@@ -55,8 +56,8 @@ export const Footer = () => {
                 </a>
               </nav>
             </div>
-
-            {/* COLOANA 3: Review CTA */}
+            
+            {/* --- COLOANA 3: Review CTA (Ascunsă temporar) ---
             <div className="space-y-6 text-center md:text-left">
               <h4 className="text-slate-900 text-xs font-black uppercase tracking-[0.2em] border-l-2 border-blue-500 pl-3">
                 Opinia Ta
@@ -65,7 +66,6 @@ export const Footer = () => {
                 Ai lucrat cu noi? Părerea ta contează enorm. Ajută-ne cu un review pe Google:
               </p>
               
-              {/* Buton modificat pentru fundal alb (stil Glass/Card) */}
               <a
                 href={CompanyInfo.googleReviewLink}
                 target="_blank"
@@ -76,6 +76,7 @@ export const Footer = () => {
                 LASĂ UN GOOGLE REVIEW
               </a>
             </div>
+            */}
           </div>
 
           {/* BARĂ JOS */}
@@ -114,7 +115,6 @@ export const Footer = () => {
               <Link href="/">Acasă</Link>
               <Link href="/about">Despre Noi</Link>
               
-              {/* --- MODIFICARE AICI: href cu ?text=... + target blanks --- */}
               <a 
                 href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`}
                 target="_blank"
@@ -125,8 +125,8 @@ export const Footer = () => {
               </a>
             </nav>
           </div>
-
-          {/* SECȚIUNEA 2: Opinia Ta */}
+          
+          {/* --- SECȚIUNEA 2: Opinia Ta (Ascunsă temporar) ---
           <div className="flex flex-col gap-4 border-t border-slate-200 pt-6">
             <h4 className="text-slate-900 font-black tracking-widest uppercase text-sm flex items-center gap-2">
               <span className="w-1.5 h-4 bg-blue-600 rounded-full"></span>
@@ -145,6 +145,7 @@ export const Footer = () => {
               Lasă un Google Review
             </a>
           </div>
+          */}
 
           {/* SECȚIUNEA 3: Contact */}
           <div className="flex flex-col gap-4 border-t border-slate-200 pt-6">

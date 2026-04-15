@@ -8,23 +8,27 @@ const whatsappMessage = encodeURIComponent(
 
 export const Hero = () => (
   <section className="relative flex min-h-[90vh] items-center justify-center py-20 overflow-hidden">
-    {/* FUNDAL ȘI OVERLAY */}
+    
+    {/* FUNDAL ȘI OVERLAY MODIFICATE PENTRU MOBIL */}
     <div
-      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      // Pe mobil folosim bg-top ca să nu taie imaginea aiurea, pe desktop revine la bg-center
+      className="absolute inset-0 bg-cover bg-top md:bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/hero-bg.png')" }}
     />
-    <div className="absolute inset-0 bg-slate-950/75 md:bg-slate-950/50 backdrop-blur-sm" />
+    {/* Am făcut masca neagră mai transparentă pe mobil (65% în loc de 75%) și i-am redus blur-ul */}
+    <div className="absolute inset-0 bg-slate-950/65 backdrop-blur-[2px] md:bg-slate-950/50 md:backdrop-blur-sm" />
 
     <div className="relative z-10 w-full max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
-      {/* BADGE */}
-      <div className="mb-8 inline-flex items-center self-start md:self-center rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-1.5 text-sm font-semibold text-orange-400 backdrop-blur-md">
-        Campanie Auto Standard • 35 Lei/Pag
+      
+      {/* BADGE (Contrast îmbunătățit: text alb, fundal ușor mai solid) */}
+      <div className="mb-8 inline-flex items-center self-start md:self-center rounded-full border border-orange-500/40 bg-orange-500/20 px-4 py-1.5 text-sm font-bold text-white backdrop-blur-md shadow-lg">
+        Campanie Auto Standard • {PricingData.autoStandard} Lei/Pag
       </div>
 
-      {/* TITLU PRINCIPAL */}
-      <h1 className="mb-12 text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight w-full text-left md:text-center italic uppercase">
+      {/* TITLU PRINCIPAL (Am adăugat drop-shadow pe textul albastru pentru lizibilitate maximă) */}
+      <h1 className="mb-12 text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight w-full text-left md:text-center italic uppercase drop-shadow-md">
         Traduceri Acte Auto <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-500 not-italic">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-500 not-italic drop-shadow-lg">
           Gata în 1-2 ORE
         </span>
       </h1>
@@ -33,7 +37,7 @@ export const Hero = () => (
       <div className="w-full rounded-[2.5rem] border border-white/10 bg-white/5 p-8 md:p-12 shadow-2xl backdrop-blur-md">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10 mb-10 w-full">
           
-          {/* Partea stângă: Lista ACTUALIZATĂ */}
+          {/* Partea stângă: Lista */}
           <div className="w-full md:w-1/2 space-y-6 text-left">
             <ul className="space-y-5">
               {[
@@ -85,16 +89,16 @@ export const Hero = () => (
           </div>
         </div>
 
-        {/* BUTON WHATSAPP */}
+        {/* SECȚIUNEA DE JOS: BUTON WHATSAPP */}
         <div className="border-t border-white/10 pt-8 mt-4 w-full flex flex-col items-center">
-          {/* justify-start pe mobil pentru a alinia conținutul butonului */}
+          
+          {/* BUTON WHATSAPP */}
           <a
             href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex h-16 w-full max-w-2xl items-center justify-start md:justify-center gap-3 rounded-2xl bg-[#25D366] px-8 text-xl font-bold text-white shadow-[0_8px_30px_rgb(37,211,102,0.25)] transition-all duration-300 hover:bg-[#20bd5a] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgb(37,211,102,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 uppercase tracking-wide"
+            className="group relative inline-flex h-16 w-full max-w-2xl items-center justify-start md:justify-center gap-3 rounded-2xl bg-[#25D366] px-8 text-xl font-bold text-white shadow-[0_8px_30px_rgb(37,211,102,0.25)] transition-all duration-300 hover:bg-[#20bd5a] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgb(37,211,102,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 uppercase tracking-wide z-10"
           >
-            {/* SVG-ul de WhatsApp neschimbat */}
             <svg
               className="w-8 h-8 fill-current group-hover:scale-110 transition-transform duration-300"
               viewBox="0 0 24 24"
@@ -104,11 +108,10 @@ export const Hero = () => (
             Trimite Actele pe WhatsApp
           </a>
 
-          {/* --- AICI ESTE MODIFICAREA --- */}
-          <p className="mt-4 text-sm font-bold text-white w-full text-left md:text-center uppercase tracking-widest leading-relaxed drop-shadow-sm">
+          {/* TEXT INFORMATIV (Am păstrat spațiul ușor mărit sus, mt-6) */}
+          <p className="mt-6 text-sm font-bold text-white w-full text-left md:text-center uppercase tracking-widest leading-relaxed drop-shadow-sm">
             Fără formulare complicate. Răspundem și ne apucăm de treabă instant.
           </p>
-          {/* --- SFÂRȘIT MODIFICARE --- */}
 
         </div>
       </div>
