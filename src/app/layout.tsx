@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     icon: "/icon.png?v=3", 
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 
