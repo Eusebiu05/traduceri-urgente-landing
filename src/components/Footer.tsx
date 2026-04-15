@@ -18,69 +18,56 @@ export const Footer = () => {
           {/* Un glow subtil albastru deschis în fundal pentru a păstra efectul premium */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-32 bg-blue-100 blur-[100px] rounded-full pointer-events-none"></div>
 
-          {/* MODIFICARE AICI: 2 coloane și lățime max-w-5xl pentru simetrie */}
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 relative z-10">
+          {/* === MODIFICARE DESIGN PENTRU SIMETRIE === */}
+          <div className="max-w-5xl mx-auto mb-16 relative z-10 flex flex-col items-center gap-12">
             
-            {/* COLOANA 1: Brand & Info */}
-            <div className="space-y-6">
-              <Link href="/" className="font-black text-3xl tracking-tighter text-slate-900 uppercase block leading-none hover:opacity-80 transition-opacity">
-                Traduceri <span className="text-blue-600">Urgente</span>
-              </Link>
-              <div className="text-[13px] space-y-2.5 font-medium text-slate-600">
-                <p className="text-slate-900 font-bold uppercase tracking-wider text-sm mb-4">{CompanyInfo.name}</p>
-                <p><span className="text-slate-400">Administrator:</span> {CompanyInfo.admin}</p>
-                <p><span className="text-slate-400">CUI:</span> {CompanyInfo.cui}</p>
-                <p><span className="text-slate-400">Reg. Com:</span> {CompanyInfo.j}</p>
-                <p><span className="text-slate-400">Sediu:</span> {CompanyInfo.sediu}</p>
-                <p className="pt-2"><span className="text-slate-400">Telefon:</span> <a href={`tel:${CompanyInfo.phone}`} className="hover:text-blue-600 transition-colors font-bold text-slate-700">{CompanyInfo.phone}</a></p>
-                <p><span className="text-slate-400">Email:</span> <a href={`mailto:${CompanyInfo.email}`} className="hover:text-blue-600 transition-colors font-bold text-slate-700">{CompanyInfo.email}</a></p>
-              </div>
-            </div>
+            {/* LOGO MUTAT SUS ȘI CENTRAT: Oglindește logo-ul din header */}
+            <Link href="/" className="font-black text-3xl tracking-tighter text-slate-900 uppercase leading-none hover:opacity-80 transition-opacity">
+              Traduceri <span className="text-blue-600">Urgente</span>
+            </Link>
 
-            {/* COLOANA 2: Navigare (Centrată pe jumătatea ei) */}
-            <div className="space-y-6 md:justify-self-center">
-              <h4 className="text-slate-900 text-xs font-black uppercase tracking-[0.2em] border-l-2 border-blue-500 pl-3">
-                Navigare
-              </h4>
-              <nav className="flex flex-col gap-4 text-sm font-bold">
-                <Link href="/" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Acasă</Link>
-                <Link href="/about" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Despre Noi</Link>
-                
-                <a 
-                  href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`} 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-600 hover:text-emerald-500 hover:translate-x-1 transition-all pt-2"
-                >
-                  Trimite Acte pe WhatsApp ↗
-                </a>
-              </nav>
-            </div>
-            
-            {/* --- COLOANA 3: Review CTA (Ascunsă temporar) ---
-            <div className="space-y-6 text-center md:text-left">
-              <h4 className="text-slate-900 text-xs font-black uppercase tracking-[0.2em] border-l-2 border-blue-500 pl-3">
-                Opinia Ta
-              </h4>
-              <p className="text-sm leading-relaxed text-slate-500">
-                Ai lucrat cu noi? Părerea ta contează enorm. Ajută-ne cu un review pe Google:
-              </p>
+            {/* GRILĂ PENTRU INFORMAȚII: Acum 2 coloane mult mai echilibrate */}
+            <div className="w-full grid md:grid-cols-2 gap-12 items-start">
               
-              <a
-                href={CompanyInfo.googleReviewLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 bg-white text-slate-800 px-6 py-3.5 rounded-xl text-xs font-black tracking-wider hover:bg-slate-50 transition-all border border-slate-200 hover:border-blue-300 shadow-sm hover:shadow-md active:scale-95"
-              >
-                <span className="text-yellow-400 text-lg group-hover:scale-110 transition-transform">⭐</span> 
-                LASĂ UN GOOGLE REVIEW
-              </a>
+              {/* COLOANA 1: SC Info (Mai scurtă acum) */}
+              <div className="space-y-6">
+                <div className="text-[13px] space-y-2.5 font-medium text-slate-600">
+                  <p className="text-slate-900 font-bold uppercase tracking-wider text-sm mb-4">{CompanyInfo.name}</p>
+                  <p><span className="text-slate-400">Administrator:</span> {CompanyInfo.admin}</p>
+                  <p><span className="text-slate-400">CUI:</span> {CompanyInfo.cui}</p>
+                  <p><span className="text-slate-400">Reg. Com:</span> {CompanyInfo.j}</p>
+                  <p><span className="text-slate-400">Sediu:</span> {CompanyInfo.sediu}</p>
+                  <p className="pt-2"><span className="text-slate-400">Telefon:</span> <a href={`tel:${CompanyInfo.phone}`} className="hover:text-blue-600 transition-colors font-bold text-slate-700">{CompanyInfo.phone}</a></p>
+                  <p><span className="text-slate-400">Email:</span> <a href={`mailto:${CompanyInfo.email}`} className="hover:text-blue-600 transition-colors font-bold text-slate-700">{CompanyInfo.email}</a></p>
+                </div>
+              </div>
+
+              {/* COLOANA 2: Navigare (Centrată pe jumătatea ei) */}
+              <div className="space-y-6 md:justify-self-center">
+                <h4 className="text-slate-900 text-xs font-black uppercase tracking-[0.2em] border-l-2 border-blue-500 pl-3">
+                  Navigare
+                </h4>
+                <nav className="flex flex-col gap-4 text-sm font-bold">
+                  <Link href="/" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Acasă</Link>
+                  <Link href="/about" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Despre Noi</Link>
+                  
+                  <a 
+                    href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-600 hover:text-emerald-500 hover:translate-x-1 transition-all pt-2"
+                  >
+                    Trimite Acte pe WhatsApp ↗
+                  </a>
+                </nav>
+              </div>
+              
+              {/* --- COLOANA 3: Review CTA (Rămâne ascunsă) --- */}
             </div>
-            */}
           </div>
 
-          {/* BARĂ JOS */}
-          <div className="max-w-6xl mx-auto pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] relative z-10">
+          {/* BARĂ JOS (Neschimbată) */}
+          <div className="max-w-5xl mx-auto pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] relative z-10">
             <div className="font-semibold text-slate-400 uppercase tracking-widest text-center md:text-left">
               © {new Date().getFullYear()} {CompanyInfo.name} | Gata în 1-2 ore
             </div>
@@ -97,7 +84,7 @@ export const Footer = () => {
       </div>
 
       {/* ======================================================== */}
-      {/* 2. FOOTER MOBIL (Varianta Luminoasă)                     */}
+      {/* 2. FOOTER MOBIL (Varianta Luminoasă) - Neschimbat        */}
       {/* ======================================================== */}
       <footer className="md:hidden bg-slate-50 pt-12 pb-8 px-6 border-t border-slate-200">
         <div className="flex flex-col gap-8">
@@ -105,7 +92,6 @@ export const Footer = () => {
             Traduceri <span className="text-blue-600">Urgente</span>
           </Link>
           
-          {/* SECȚIUNEA 1: Navigare */}
           <div className="flex flex-col gap-4">
             <h4 className="text-slate-900 font-black tracking-widest uppercase text-sm flex items-center gap-2">
               <span className="w-1.5 h-4 bg-blue-600 rounded-full"></span>
@@ -125,29 +111,7 @@ export const Footer = () => {
               </a>
             </nav>
           </div>
-          
-          {/* --- SECȚIUNEA 2: Opinia Ta (Ascunsă temporar) ---
-          <div className="flex flex-col gap-4 border-t border-slate-200 pt-6">
-            <h4 className="text-slate-900 font-black tracking-widest uppercase text-sm flex items-center gap-2">
-              <span className="w-1.5 h-4 bg-blue-600 rounded-full"></span>
-              Opinia Ta
-            </h4>
-            <p className="text-sm text-slate-500 pl-3">
-              Ai lucrat cu noi? Ajută-ne cu un review pe Google!
-            </p>
-            <a 
-              href={CompanyInfo.googleReviewLink} 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-white border border-slate-200 shadow-sm px-6 py-4 text-sm font-bold text-slate-800 uppercase tracking-wider"
-            >
-              <span className="text-yellow-400 text-lg">★</span>
-              Lasă un Google Review
-            </a>
-          </div>
-          */}
 
-          {/* SECȚIUNEA 3: Contact */}
           <div className="flex flex-col gap-4 border-t border-slate-200 pt-6">
             <h4 className="text-slate-900 font-black tracking-widest uppercase text-sm flex items-center gap-2 mb-2">
               <span className="w-1.5 h-4 bg-blue-600 rounded-full"></span>
@@ -176,7 +140,6 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* COPYRIGHT & SEMNĂTURĂ (Mobil) */}
           <div className="pt-8 mt-4 border-t border-slate-200 flex flex-col gap-4 items-center">
             <div className="text-xs text-slate-400 text-center font-medium">
               <p>© {new Date().getFullYear()} {CompanyInfo.name}.</p>
@@ -190,7 +153,6 @@ export const Footer = () => {
               </span>
             </div>
           </div>
-
         </div>
       </footer>
     </>

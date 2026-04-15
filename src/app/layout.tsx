@@ -10,8 +10,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Traduceri Urgente | Gata în 1-2 ore",
+  title: "Traduceri Urgente",
   description: "Traduceri autorizate pentru acte auto, contracte și documente.",
+  icons: {
+    // Punem ?v=3 ca browserul să creadă că e un fișier complet nou
+    icon: "/icon.png?v=3", 
+  },
   robots: {
     index: false,
     follow: false,
