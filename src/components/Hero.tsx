@@ -13,7 +13,7 @@ export const Hero = () => (
     <div
       // Pe mobil folosim bg-top ca să nu taie imaginea aiurea, pe desktop revine la bg-center
       className="absolute inset-0 bg-cover bg-top md:bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/hero-bg.png')" }}
+      style={{ backgroundImage: "url('/hero-bg.webp')" }}
     />
     {/* Am făcut masca neagră mai transparentă pe mobil (65% în loc de 75%) și i-am redus blur-ul */}
     <div className="absolute inset-0 bg-slate-950/65 backdrop-blur-[2px] md:bg-slate-950/50 md:backdrop-blur-sm" />
