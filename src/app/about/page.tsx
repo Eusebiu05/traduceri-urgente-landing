@@ -31,16 +31,38 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           
-          {/* Secțiunea de Intro (Text centrat, fără imagine momentan) */}
-          <div className="max-w-3xl mx-auto text-center mb-20">
-            <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-6">
+          {/* Secțiunea de Intro Curățată */}
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-8">
               Cine este {CompanyInfo.name}?
             </h2>
-            <p className="text-slate-600 text-lg leading-relaxed">
-              Suntem o firmă de traduceri din România, specializată pe nișa traducerilor auto și juridice. 
-              Sub conducerea administratorului <strong>{CompanyInfo.admin}</strong>, am construit un sistem 
-              de lucru ultra-rapid, adaptat nevoilor clienților care se află în procesul de înmatriculare sau achiziție auto.
+            
+            <p className="text-slate-600 text-lg leading-relaxed mb-6">
+              Suntem o agenție de traduceri din Valea Lupului (Iași), cu experiență încă din 2016. Ne-am specializat pe ce știm să facem cel mai repede și mai bine: <strong>traduceri auto și juridice</strong>.
             </p>
+            
+            <p className="text-slate-600 text-lg leading-relaxed mb-10">
+              Sub coordonarea Cristinei Ioniță, am pus la punct un flux de lucru ultra-rapid. Știm că atunci când îți înmatriculezi sau cumperi o mașină, fiecare oră contează. De aceea, am eliminat birocrația și ne concentrăm pe soluții.
+            </p>
+
+            {/* Lista cu servicii așezată frumos */}
+            <div className="text-left bg-slate-50 p-8 rounded-[2rem] border border-slate-100 shadow-sm">
+              <h3 className="text-xl font-bold text-slate-800 mb-6 text-center">Cu ce te ajutăm mai exact?</h3>
+              <ul className="space-y-4 text-slate-600">
+                <li className="flex items-start gap-3">
+                  <span className="text-xl">🚗</span>
+                  <span><strong>Acte auto:</strong> Traducem rapid certificate de înmatriculare (brief-uri), facturi externe și contracte de vânzare-cumpărare (ex. Kaufvertrag) – fix ce ai nevoie pentru dosarul tău.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-xl">⚖️</span>
+                  <span><strong>Documente juridice:</strong> Procuri, declarații și alte acte oficiale, traduse corect pentru RAR, DRPCIV, ANAF sau notariate.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-xl">⚡</span>
+                  <span><strong>Viteză maximă:</strong> Preluăm comenzile imediat și livrăm traducerile la timp, ca tu să-ți poți pune mașina pe șosea fără stres.</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Carduri Misiune / Administrator */}
@@ -73,7 +95,6 @@ export default function AboutPage() {
                 Echipa noastră este pregătită să îți preia documentele. Fără drumuri inutile, direct pe WhatsApp.
               </p>
               
-              {/* Link-ul este acum curat și folosește variabila definită mai sus */}
               <a 
                 href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`}
                 target="_blank"

@@ -14,13 +14,13 @@ export const Footer = () => {
       {/* ======================================================== */}
       <div className="hidden md:block">
         <footer className="bg-slate-50 pt-20 pb-10 px-4 border-t border-slate-200 relative overflow-hidden">
-          
+
           {/* Un glow subtil albastru deschis în fundal pentru a păstra efectul premium */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-32 bg-blue-100 blur-[100px] rounded-full pointer-events-none"></div>
 
           {/* === MODIFICARE DESIGN PENTRU SIMETRIE === */}
           <div className="max-w-5xl mx-auto mb-16 relative z-10 flex flex-col items-center gap-12">
-            
+
             {/* LOGO MUTAT SUS ȘI CENTRAT: Oglindește logo-ul din header */}
             <Link href="/" className="font-black text-3xl tracking-tighter text-slate-900 uppercase leading-none hover:opacity-80 transition-opacity">
               Traduceri <span className="text-blue-600">Urgente</span>
@@ -28,7 +28,7 @@ export const Footer = () => {
 
             {/* GRILĂ PENTRU INFORMAȚII: Acum 2 coloane mult mai echilibrate */}
             <div className="w-full grid md:grid-cols-2 gap-12 items-start">
-              
+
               {/* COLOANA 1: SC Info (Mai scurtă acum) */}
               <div className="space-y-6">
                 <div className="text-[13px] space-y-2.5 font-medium text-slate-600">
@@ -50,9 +50,11 @@ export const Footer = () => {
                 <nav className="flex flex-col gap-4 text-sm font-bold">
                   <Link href="/" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Acasă</Link>
                   <Link href="/about" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Despre Noi</Link>
-                  
-                  <a 
-                    href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`} 
+                  <Link href="/termeni-si-conditii" className="text-slate-400 hover:text-slate-600 text-[12px] font-medium transition-all pt-1">Termeni și Condiții</Link>
+                  <Link href="/politica-cookies" className="text-slate-400 hover:text-slate-600 text-[12px] font-medium transition-all">Politică Cookies</Link>
+
+                  <a
+                    href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-emerald-600 hover:text-emerald-500 hover:translate-x-1 transition-all pt-2"
@@ -61,7 +63,7 @@ export const Footer = () => {
                   </a>
                 </nav>
               </div>
-              
+
               {/* --- COLOANA 3: Review CTA (Rămâne ascunsă) --- */}
             </div>
           </div>
@@ -71,7 +73,7 @@ export const Footer = () => {
             <div className="font-semibold text-slate-400 uppercase tracking-widest text-center md:text-left">
               © {new Date().getFullYear()} {CompanyInfo.name} | Gata în 1-2 ore
             </div>
-            
+
             <div className="group flex items-center gap-3 px-5 py-2.5 bg-white rounded-full border border-slate-200 shadow-sm transform transition-all hover:border-blue-300 hover:bg-slate-50">
               <span className="font-bold text-slate-400 uppercase tracking-widest text-[10px]">Realizat de:</span>
               <div className="h-3 w-[1px] bg-slate-200 group-hover:bg-blue-300 transition-colors"></div>
@@ -91,7 +93,7 @@ export const Footer = () => {
           <Link href="/" className="font-black text-2xl tracking-tighter text-slate-900 uppercase block leading-none">
             Traduceri <span className="text-blue-600">Urgente</span>
           </Link>
-          
+
           <div className="flex flex-col gap-4">
             <h4 className="text-slate-900 font-black tracking-widest uppercase text-sm flex items-center gap-2">
               <span className="w-1.5 h-4 bg-blue-600 rounded-full"></span>
@@ -100,8 +102,10 @@ export const Footer = () => {
             <nav className="flex flex-col gap-4 text-base font-bold text-slate-600 pl-3">
               <Link href="/">Acasă</Link>
               <Link href="/about">Despre Noi</Link>
-              
-              <a 
+              <Link href="/termeni-si-conditii" className="text-sm font-medium text-slate-400">Termeni și Condiții</Link>
+              <Link href="/politica-cookies" className="text-sm font-medium text-slate-400">Politică Cookies</Link>
+
+              <a
                 href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -117,7 +121,7 @@ export const Footer = () => {
               <span className="w-1.5 h-4 bg-blue-600 rounded-full"></span>
               Contact
             </h4>
-            
+
             <div className="pl-3 space-y-4">
               <div className="space-y-1 text-sm text-slate-500">
                 <p className="font-bold text-slate-800 uppercase">{CompanyInfo.name}</p>
@@ -144,7 +148,7 @@ export const Footer = () => {
             <div className="text-xs text-slate-400 text-center font-medium">
               <p>© {new Date().getFullYear()} {CompanyInfo.name}.</p>
             </div>
-            
+
             <div className="flex items-center gap-2 px-5 py-2 bg-white rounded-full border border-slate-200 shadow-sm">
               <span className="font-bold text-slate-400 uppercase tracking-widest text-[9px]">Realizat de:</span>
               <div className="h-3 w-[1px] bg-slate-200"></div>
