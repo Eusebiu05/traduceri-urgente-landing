@@ -50,9 +50,10 @@ export const Footer = () => {
                 <nav className="flex flex-col gap-4 text-sm font-bold">
                   <Link href="/" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Acasă</Link>
                   <Link href="/about" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Despre Noi</Link>
+                  {/*De implementat în curând
                   <Link href="/termeni-si-conditii" className="text-slate-400 hover:text-slate-600 text-[12px] font-medium transition-all pt-1">Termeni și Condiții</Link>
                   <Link href="/politica-cookies" className="text-slate-400 hover:text-slate-600 text-[12px] font-medium transition-all">Politică Cookies</Link>
-
+                    */}
                   <a
                     href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`}
                     target="_blank"
@@ -102,8 +103,10 @@ export const Footer = () => {
             <nav className="flex flex-col gap-4 text-base font-bold text-slate-600 pl-3">
               <Link href="/">Acasă</Link>
               <Link href="/about">Despre Noi</Link>
+              {/* De implementat în curând
               <Link href="/termeni-si-conditii" className="text-sm font-medium text-slate-400">Termeni și Condiții</Link>
               <Link href="/politica-cookies" className="text-sm font-medium text-slate-400">Politică Cookies</Link>
+              */}
 
               <a
                 href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`}
@@ -151,6 +154,7 @@ export const Footer = () => {
 
             <div className="flex items-center gap-2 px-5 py-2 bg-white rounded-full border border-slate-200 shadow-sm">
               <span className="font-bold text-slate-400 uppercase tracking-widest text-[9px]">Realizat de:</span>
+              {/* De adaugat link catre portofoliu in curând */}
               <div className="h-3 w-[1px] bg-slate-200"></div>
               <span className="font-black text-slate-700 uppercase tracking-tighter text-xs">
                 Făgăteanu Dumitru Eusebiu PFA
