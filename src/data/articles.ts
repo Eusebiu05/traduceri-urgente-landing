@@ -91,5 +91,74 @@ export const articles = [
       
       <p>Nu ezitați să ne contactați telefonic pentru o cotație de preț exactă și un timp de livrare garantat pentru setul dumneavoastră specific de acte!</p>
     `,
+  },
+  {
+    id: 4,
+    category: "Înmatriculări, Traduceri auto",
+    readTime: "5 min",
+    image: "/images/blog/numere-rosii.jpg",
+    title: "Acte necesare pentru numere roșii (provizorii) în 2026: Ghid complet pentru mașinile aduse din străinătate",
+    excerpt: "Soluția legală și rapidă este autorizația provizorie de circulație — ce oamenii numesc curent „numerele roșii\".",
+    date: "22 Aprilie 2026",
+    slug: "acte-necesare-numere-rosii-provizorii-2026",
+    content: `
+      <p>Ai adus o mașină din străinătate și vrei să circuli legal cât mai repede? Știm cum e: tocmai ai cumpărat o mașină din Germania, Austria sau oriunde în UE, ești nerăbdător să o conduci, dar fără numere românești nu poți circula legal pe drumurile publice. Și nici procesul de înmatriculare definitivă nu se rezolvă într-o zi. Soluția legală și rapidă este autorizația provizorie de circulație — ce oamenii numesc curent „numerele roșii". Îți permite să circuli cu mașina pe drumurile publice din România o perioadă limitată, până obții înmatricularea definitivă. În acest ghid îți explicăm exact ce acte ai nevoie, unde le depui, cât te costă și — cel mai important — care dintre ele trebuie traduse ca să nu te trezești cu dosarul respins.</p>
+      
+      <h2 style="font-weight: 800; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: #1e1b4b;">Lista completă de acte pentru numerele roșii în 2026</h2>
+      <p>Conform procedurii DRPCIV, dosarul pentru autorizația provizorie de circulație trebuie să conțină următoarele:</p>
+      <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>Cererea tip (formular DRPCIV):</strong> Formularul oficial se completează la ghișeu sau poate fi descărcat de pe site-ul DRPCIV și completat de acasă. Asigură-te că îl completezi corect — orice greșeală îți poate întârzia dosarul. Descarcă cererea tip direct de pe drpciv.ro (secțiunea Formulare → Autorizație provizorie de circulație).</li>
+        <li><strong>Asigurarea RCA valabilă:</strong> Aceasta trebuie să fie emisă pe seria de șasiu a mașinii, nu pe număr de înmatriculare (pentru că mașina nu are încă număr românesc). Orice broker de asigurări sau platformă online îți poate emite un RCA pe șasiu — durează maxim 15 minute. Atenție: RCA-ul trebuie să fie în vigoare la data depunerii dosarului. Nu merge cu asigurarea din țara de origine pentru această procedură.</li>
+        <li><strong>Dovada proprietății:</strong> Acesta este documentul care demonstrează că tu ești noul proprietar al mașinii. Poate fi Kaufvertrag (contract de vânzare-cumpărare, specific Germania și Austria), Factură fiscală (dacă ai cumpărat de la un dealer) sau Bill of Sale sau echivalent din alte țări. Notă: Pentru numerele roșii, DRPCIV acceptă contractul în original, fără traducere. Traducerea va fi necesară la pașii următori — Primărie, ANAF, RAR.</li>
+        <li><strong>Actele mașinii din țara de origine:</strong> Acestea trebuie prezentate în original și copie. De regulă includ Talonul (Zulassungsbescheinigung Teil I în Germania / Fahrzeugschein) — documentul care însoțea mașina zilnic și Cartea mașinii (Zulassungsbescheinigung Teil II / Fahrzeugbrief) — documentul de proprietate din țara de origine. Dacă mașina vine din Germania, aceste două documente formează împreună dovada că mașina era înmatriculată legal acolo.</li>
+        <li><strong>Actul tău de identitate:</strong> Cartea de identitate sau pașaportul, în original și copie. Dacă depui dosarul în numele unei persoane juridice, ai nevoie și de documentele firmei.</li>
+        <li><strong>Taxele aferente:</strong> Costurile sunt minime: Autorizație provizorie de circulație: 13 lei; Plăcuțe de înmatriculare (numerele roșii): ~40 lei; Total aproximativ: ~53 lei. Poți plăti simplu și rapid pe ghiseul.ro — nu mai trebuie să stai la coadă la trezorerie.</li>
+      </ul>
+
+      <h2 style="font-weight: 800; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: #1e1b4b;">⚠️ Secțiunea importantă: Ce acte au nevoie de traducere autorizată?</h2>
+      <p>Vestea bună: pentru numerele roșii nu ai nevoie de traduceri. DRPCIV acceptă actele mașinii și contractul de vânzare în original, în limba țării de origine. Vestea mai puțin bună: imediat după ce obții numerele roșii, urmează alte instituții — și acestea nu acceptă documente netraduse.</p>
+
+      <h2 style="font-weight: 800; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: #1e1b4b;">Pentru pașii următori — traducerea este OBLIGATORIE</h2>
+      <p>Numărul roșu îți oferă 30 de zile să circuli, dar în această perioadă trebuie să treci prin:</p>
+      <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>1. Primăria de domiciliu</strong> — pentru luarea în evidență a vehiculului → Solicită traducerea autorizată a contractului de vânzare și a actelor mașinii.</li>
+        <li><strong>2. ANAF</strong> — pentru obținerea certificatului fiscal (dacă mașina vine din afara UE sau există obligații de TVA) → Solicită traducerea autorizată a tuturor actelor.</li>
+        <li><strong>3. RAR (Registrul Auto Român)</strong> — pentru inspecția tehnică înainte de înmatriculare → Solicită traducerea cărții mașinii și a contractului.</li>
+        <li><strong>4. DRPCIV</strong> — pentru înmatricularea definitivă → Dosar complet cu toate traducerile autorizate.</li>
+      </ul>
+
+      <h2 style="font-weight: 800; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: #1e1b4b;">Nu face mai multe drumuri — pregătește totul de la primul pas</h2>
+      <p>Cel mai frecvent scenariu pe care îl întâlnim: proprietarul vine la DRPCIV fără traduceri, obține numerele roșii, merge la Primărie și este trimis înapoi pentru că nu are contractul tradus. Merge la un traducător autorizat, iar când revine la Primărie constată că mai are nevoie și de traducerea cărții mașinii. Altă zi, alt drum. Setul complet de traduceri de care ai nevoie pentru tot procesul de înmatriculare a unei mașini din import include:</p>
+      <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li>✔️ Traducerea contractului de vânzare-cumpărare (Kaufvertrag)</li>
+        <li>✔️ Traducerea talonului (Zulassungsbescheinigung Teil I)</li>
+        <li>✔️ Traducerea cărții mașinii (Zulassungsbescheinigung Teil II)</li>
+        <li>✔️ Traducerea facturii (dacă e cazul)</li>
+        <li>✔️ Apostilă sau legalizare, acolo unde este necesar</li>
+      </ul>
+
+      <h2 style="font-weight: 800; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: #1e1b4b;">Cum te ajutăm noi</h2>
+      <p>Suntem traducători autorizați cu experiență vastă în traduceri de documente auto din germană, franceză, engleză, italiană, maghiară și alte limbi europene. Trimite-ne documentele acum și:</p>
+      <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li>📄 Îți pregătim setul complet de traduceri autorizate</li>
+        <li>⚡ Termen rapid — în 24-48 de ore în majoritatea cazurilor</li>
+        <li>✅ Dosarul tău va fi acceptat la DRPCIV, Primărie, ANAF și RAR</li>
+        <li>💬 Îți spunem exact ce acte îți lipsesc, înainte să te duci la ghișeu</li>
+      </ul>
+      <p>Nu pleca la drum fără dosarul complet. Contactează-ne acum și rezolvăm tot împreună.</p>
+
+      <h2 style="font-weight: 800; font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: #1e1b4b;">Rezumat rapid — Lista de control (checklist)</h2>
+      <p>Printează sau salvează această listă înainte să pleci la DRPCIV:</p>
+      <ul style="list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li>[ ] Cerere tip DRPCIV completată</li>
+        <li>[ ] RCA valabil pe seria de șasiu</li>
+        <li>[ ] Contract de vânzare / Kaufvertrag (original + copie)</li>
+        <li>[ ] Talon mașină — Teil I (original + copie)</li>
+        <li>[ ] Carte mașină — Teil II (original + copie)</li>
+        <li>[ ] Carte de identitate (original + copie)</li>
+        <li>[ ] Taxă 13 lei (autorizație) + ~40 lei (plăcuțe) — plătite pe ghiseul.ro</li>
+      </ul>
+      <p>Ai întrebări? Lasă un comentariu mai jos sau contactează-ne direct — îți răspundem în cel mai scurt timp.</p>
+    `
   }
 ];
