@@ -30,6 +30,7 @@ export const Footer = () => {
                   <p className="text-slate-900 font-bold uppercase tracking-wider text-sm mb-4">{CompanyInfo.name}</p>
                   <p><span className="text-slate-400">Admin:</span> {CompanyInfo.admin}</p>
                   <p><span className="text-slate-400">CUI:</span> {CompanyInfo.cui}</p>
+                  <p><span className="text-slate-400">Reg. Com.</span> {CompanyInfo.j}</p>
                   <p><span className="text-slate-400">Sediu:</span> {CompanyInfo.sediu}</p>
                   <div className="pt-2 space-y-1">
                     <p><a href={`tel:${CompanyInfo.phone}`} className="hover:text-blue-600 transition-colors font-bold text-slate-700">{CompanyInfo.phone}</a></p>
@@ -46,6 +47,11 @@ export const Footer = () => {
                 <nav className="flex flex-col gap-4 text-sm font-bold">
                   <Link href="/" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Acasă</Link>
                   <Link href="/about" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Despre Noi</Link>
+                  {/* De decomentat pentru ca inca nu exista pagina de Termeni și Condiții 
+                  <Link href="/termeni-si-conditii" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Termeni și Condiții</Link>
+                  <Link href="/politica-de-confidentialitate" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Politica de Confidențialitate</Link>
+                  */}
+                  <Link href="/politica-cookies" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Politica de Cookies</Link>
                   <a href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-500 hover:translate-x-1 transition-all">
                     WhatsApp Online ↗
                   </a>
@@ -119,6 +125,13 @@ export const Footer = () => {
             <nav className="flex flex-col gap-3 text-base font-bold text-slate-600 pl-3">
               <Link href="/">Acasă</Link>
               <Link href="/about">Despre Noi</Link>
+              {/* De decomentat pentru ca inca nu exista pagina de Termeni și Condiții
+              <Link href="/termeni-si-conditii">Termeni și Condiții</Link>
+              */}
+              {/* De decomentat pentru ca inca nu exista pagina de Politica de Confidențialitate
+              <Link href="/politica-de-confidentialitate">Politica de Confidențialitate</Link>
+              */}
+              <Link href="/politica-cookies">Politica de Cookies</Link>
               <a href={`https://wa.me/${CompanyInfo.whatsapp}?text=${whatsappMessage}`} className="text-emerald-600">WhatsApp Online</a>
             </nav>
           </div>

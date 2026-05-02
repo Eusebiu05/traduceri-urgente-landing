@@ -1,9 +1,8 @@
-// Fișier: app/blog/[slug]/page.tsx
-
 import Link from "next/link";
 import { Header } from "@/components/Header";
-// IMPORTĂM LISTA CENTRALIZATĂ
-import { articles } from "@/data/articles";
+// SCHIMBĂM AICI: Importăm motorul de Markdown în loc de articles.ts
+import { getPostBySlug } from "@/lib/markdown";
+import { Footer } from '@/components/Footer';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -12,9 +11,16 @@ interface PageProps {
 export default async function ArticlePage({ params }: PageProps) {
   const resolvedParams = await params;
   
-  // Acum caută în fișierul central 'articles.ts'
-  const article = articles.find((a) => a.slug === resolvedParams.slug);
+  let article;
+  try {
+    // Încearcă să citească fișierul numere-rosii.md
+    article = getPostBySlug(resolvedParams.slug);
+  } catch (error) {
+    // Dacă nu găsește fișierul .md, article rămâne null
+    article = null;
+  }
 
+  // Dacă nu există articolul, afișează 404-ul tău personalizat
   if (!article) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50">
@@ -42,13 +48,15 @@ export default async function ArticlePage({ params }: PageProps) {
           </h1>
         </header>
         
-        {/* AICI ESTE MAGIA: Randăm conținutul HTML din articles.ts */}
+        {/* Aici injectăm conținutul din .md */}
+        {/* Am adăugat clasele "prose" de la Tailwind ca să formateze frumos listele și paragrafele */}
         <div 
-          className="text-lg text-slate-700 leading-relaxed"
+          className="text-lg text-slate-700 leading-relaxed prose prose-blue max-w-none"
           dangerouslySetInnerHTML={{ __html: article.content }} 
         />
         
       </article>
+      <Footer />
     </main>
   );
 }
