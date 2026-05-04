@@ -126,7 +126,7 @@ export const Footer = () => {
             <nav className="flex flex-col gap-3 text-base font-bold text-slate-600 pl-3">
               <Link href="/">Acasă</Link>
               <Link href="/about">Despre Noi</Link>
-              <Link href="/servicii-oferite">Servicii Oferite</Link>
+              <Link href="/servicii_oferite">Servicii Oferite</Link>
               {/* De decomentat pentru ca inca nu exista pagina de Termeni și Condiții
               <Link href="/termeni-si-conditii">Termeni și Condiții</Link>
               */}

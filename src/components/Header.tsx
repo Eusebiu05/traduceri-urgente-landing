@@ -90,6 +90,7 @@ export const Header = () => {
         <div className="md:hidden bg-white border-t border-slate-100 shadow-2xl absolute w-full left-0 px-8 py-8 flex flex-col gap-2 animate-in fade-in slide-in-from-top-4 duration-300 z-[100]">
           <Link href="/" className="text-lg font-semibold text-slate-800 py-3 border-b border-slate-50" onClick={() => setIsMenuOpen(false)}>Acasă</Link>
           <Link href="/blog" className="text-lg font-semibold text-slate-800 py-3 border-b border-slate-50" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+          <Link href="/servicii_oferite" className="text-lg font-semibold text-slate-800 py-3 border-b border-slate-50" onClick={() => setIsMenuOpen(false)}>Servicii Oferite</Link>
           <Link href="/about" className="text-lg font-semibold text-slate-800 py-3 border-b border-slate-50" onClick={() => setIsMenuOpen(false)}>Despre noi</Link>
           
           <a
