@@ -43,6 +43,7 @@ export const Header = () => {
           {/* NAVIGARE DESKTOP */}
           <nav className="hidden md:flex gap-6 items-center">
             <Link href="/" className={getLinkClass("/")}>Acasă</Link>
+            <Link href="/servicii_oferite" className={getLinkClass("/servicii_oferite")}>Servicii Oferite</Link>
             <Link href="/blog" className={getLinkClass("/blog")}>Blog</Link>
             <Link href="/about" className={getLinkClass("/about")}>Despre noi</Link>
             

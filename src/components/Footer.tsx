@@ -47,6 +47,7 @@ export const Footer = () => {
                 <nav className="flex flex-col gap-4 text-sm font-bold">
                   <Link href="/" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Acasă</Link>
                   <Link href="/about" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Despre Noi</Link>
+                  <Link href="/servicii_oferite" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Servicii Oferite</Link>
                   {/* De decomentat pentru ca inca nu exista pagina de Termeni și Condiții 
                   <Link href="/termeni-si-conditii" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Termeni și Condiții</Link>
                   <Link href="/politica-de-confidentialitate" className="text-slate-500 hover:text-blue-600 hover:translate-x-1 transition-all">Politica de Confidențialitate</Link>
@@ -125,6 +126,7 @@ export const Footer = () => {
             <nav className="flex flex-col gap-3 text-base font-bold text-slate-600 pl-3">
               <Link href="/">Acasă</Link>
               <Link href="/about">Despre Noi</Link>
+              <Link href="/servicii-oferite">Servicii Oferite</Link>
               {/* De decomentat pentru ca inca nu exista pagina de Termeni și Condiții
               <Link href="/termeni-si-conditii">Termeni și Condiții</Link>
               */}
